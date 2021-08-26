@@ -1,0 +1,44 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+*.imi
+*.lst
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.idea
+*.iml
+.settings/
+.project
+.classpath
+target/
+logs/
+.idea/
+tanhua-app/target/generated-sources/
+tanhua-app/target/generated-test-sources/
+tanhua-app/target/test-classes/
+tanhua-autoconfig/target/generated-sources/
+tanhua-commons/src/main/resources/
+tanhua-commons/target/generated-sources/
+tanhua-domain/src/main/java/com/tanhu/
+tanhua-domain/target/generated-sources/
+tanhua-interface/target/generated-sources/
+tanhua-mapper/target/generated-sources/
+tanhua-service/target/generated-sources/

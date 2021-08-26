@@ -1,0 +1,43 @@
+#微服务启动参数
+spring:
+  application:
+    name: order-service
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:      #配置注册中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+      config:         #配置中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+        file-extension: properties
+        shared-configs:
+          - dataId: mp-config.properites
+            group: ${group.name}
+          - dataId: feign-config.properties
+            group: ${group.name}
+          - dataId: ribbon-config.properties
+            group: ${group.name}
+          - dataId: rocketmq-config.properties
+            group: ${group.name}
+  profiles:           # 激活配置环境
+    active: dev
+
+# 组名称
+group:
+  name: xc-group
+
+# 日志文件配置路径
+logging:
+  config: classpath:log4j2-dev.xml
+
+# swagger 文档配置
+swagger:
+  title: "学成在线2.0-订单及支付服务API文档"
+  description: "订单的分库分表及集成支付（微信和支付宝）"
+  version: 1.0.0
+  base-package: com.xuecheng

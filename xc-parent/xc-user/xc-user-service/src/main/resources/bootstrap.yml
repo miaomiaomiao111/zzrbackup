@@ -1,0 +1,55 @@
+#微服务启动参数
+spring:
+  application:
+    name: user-service
+  main:
+    allow-bean-definition-overriding: true # Spring Boot 2.1 需要设定
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.94.129:8858 #sentinel控制台地址
+    nacos:
+      discovery:      #配置注册中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+      config:         #配置中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+        file-extension: properties
+        shared-configs:
+          - dataId: mp-config.properites
+            group: ${group.name}
+          - dataId: feign-config.properties
+            group: ${group.name}
+          - dataId: ribbon-config.properties
+            group: ${group.name}
+  profiles:           # 激活配置环境
+    active: dev
+
+# 组名称
+group:
+  name: xc-group
+
+# 日志文件配置路径
+logging:
+  config: classpath:./log4j2-dev.xml
+
+
+#短信相关配置信息（学成课程中不会涉及到）
+sms:
+  url: http://211.103.136.242:7271/sailing
+  effectiveTime: 600
+
+
+
+
+
+
+
+
+
+
+
+

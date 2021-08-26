@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xuecheng.order.mapper.PayMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xuecheng.order.entity.Pay">
+        <id column="id" property="id" />
+        <result column="user_name" property="userName" />
+        <result column="company_id" property="companyId" />
+        <result column="order_id" property="orderId" />
+        <result column="pay_number" property="payNumber" />
+        <result column="status" property="status" />
+        <result column="pay_method" property="payMethod" />
+        <result column="pay_date" property="payDate" />
+        <result column="total_amount" property="totalAmount" />
+        <result column="receipt_amount" property="receiptAmount" />
+        <result column="buyer_pay_amount" property="buyerPayAmount" />
+        <result column="create_date" property="createDate" />
+        <result column="pay_response" property="payResponse" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_name, company_id, order_id, pay_number, status, pay_method, pay_date, total_amount, receipt_amount, buyer_pay_amount, create_date, pay_response
+    </sql>
+
+</mapper>

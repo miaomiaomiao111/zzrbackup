@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xuecheng.learning.mapper.CourseRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xuecheng.learning.entity.CourseRecord">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="user_name" property="userName" />
+        <result column="company_id" property="companyId" />
+        <result column="course_id" property="courseId" />
+        <result column="course_pub_id" property="coursePubId" />
+        <result column="course_pub_name" property="coursePubName" />
+        <result column="teachmode" property="teachmode" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="teachplan_id" property="teachplanId" />
+        <result column="teachplan_name" property="teachplanName" />
+        <result column="create_date" property="createDate" />
+        <result column="change_date" property="changeDate" />
+        <result column="paid" property="paid" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, user_name, company_id, course_id, course_pub_id, course_pub_name, teachmode, start_time, end_time, teachplan_id, teachplan_name, create_date, change_date, paid
+    </sql>
+
+</mapper>

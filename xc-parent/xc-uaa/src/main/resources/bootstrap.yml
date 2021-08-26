@@ -1,0 +1,42 @@
+#微服务启动参数
+spring:
+  application:
+    name: uaa-service
+  main:
+    allow-bean-definition-overriding: true # Spring Boot 2.1 需要设定
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 192.168.94.129:8858 #sentinel控制台地址
+    nacos:
+      discovery:      #配置注册中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+      config:         #配置中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+        file-extension: properties
+        shared-configs:
+          - dataId: feign-config.properties
+            group: ${group.name}
+          - dataId: ribbon-config.properties
+            group: ${group.name}
+          - dataId: freemarker-config.properties
+            group: ${group.name}
+  profiles:           # 激活配置环境
+    active: dev
+
+# 组名称
+group:
+  name: xc-group
+
+
+# 日志文件配置路径
+logging:
+  config: classpath:./log4j2-dev.xml
+
+
+#对称秘钥，资源服务器使用该秘钥来解密
+siging-key: xuecheng_security233

@@ -1,0 +1,77 @@
+#微服务启动参数
+spring:
+  application:
+    name: uaa-gateway-server
+  main:
+    allow-bean-definition-overriding: true # Spring Boot 2.1 需要设定
+  cloud:
+    nacos:
+      discovery:      #配置注册中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+      config:         #配置中心
+        server-addr: 192.168.94.129:8848
+        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        group: ${group.name}
+        file-extension: properties
+        shared-configs:
+          - dataId: feign-config.properties
+            group: ${group.name}
+          - dataId: ribbon-config.properties
+            group: ${group.name}
+  profiles:           # 激活配置环境
+    active: dev
+
+# 组名称
+group:
+  name: xc-group
+
+
+# 日志文件配置路径
+logging:
+  config: classpath:./log4j2-dev.xml
+
+
+#对称秘钥，资源服务器使用该秘钥来解密
+siging-key: xuecheng_security233
+
+
+
+#网关配置
+zuul:
+  retryable: true               #开启zuul的请求重试策略
+  add-host-header: true         #重定向问题的原因和解决
+  ignoredServices: "*"          #表示我们忽略所有默认匹配的path,只能路由到我们手动配置的路径
+  sensitiveHeaders: "*"         #表示我们敏感所有默认匹配的path,只能路由到我们手动配置的路径
+  routes:                       #路由配置
+    content-service:
+      path: /content/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    system-service:
+      path: /system/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    media-service:
+      path: /media/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    search-service:
+      path: /search/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    teaching-service:
+      path: /teaching/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    learning-service:
+      path: /learning/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    order-service:
+      path: /order/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    comment-service:
+      path: /comment/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    uaa-service:
+      path: /uaa/**
+      strip-prefix: false       #这里的stripPrefix默认为true
+    user-service:
+      path: /user/**
+      strip-prefix: false       #这里的stripPrefix默认为true
