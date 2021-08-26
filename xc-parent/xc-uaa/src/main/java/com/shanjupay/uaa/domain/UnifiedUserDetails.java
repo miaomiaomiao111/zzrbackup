@@ -3,6 +3,8 @@ package com.shanjupay.uaa.domain;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.*;
+
 
 public class UnifiedUserDetails implements UserDetails {
 

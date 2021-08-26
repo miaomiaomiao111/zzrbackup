@@ -4,9 +4,9 @@ spring:
     name: content-service
   datasource:
     username: root
-    password: root
+    password: xc127
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.92.129:3306/xc_content?useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://101.132.223.144:53306/xc_content?useUnicode=true&characterEncoding=utf8&useSSL=false
 
 # MP 的配置信息
 mybatis-plus:

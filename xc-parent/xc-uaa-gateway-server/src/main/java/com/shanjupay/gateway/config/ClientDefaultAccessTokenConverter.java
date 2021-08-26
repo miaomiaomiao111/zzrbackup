@@ -12,6 +12,8 @@ import org.springframework.security.oauth2.provider.token.AccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.DefaultUserAuthenticationConverter;
 import org.springframework.security.oauth2.provider.token.UserAuthenticationConverter;
 
+import java.util.*;
+
 /**
  * 令牌格式json与spring OAuth2Authentication的转换   增加jwt对client Authorities的支持
  */

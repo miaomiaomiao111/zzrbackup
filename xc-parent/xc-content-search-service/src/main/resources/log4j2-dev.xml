@@ -59,7 +59,8 @@
 		
 		<logger name="RocketmqClient" level="WARN">
 		</logger>
-
+        <logger name="com.alibaba.nacos" level="INFO">
+        </logger>
         <!--OFF   0-->
         <!--FATAL   100-->
         <!--ERROR   200-->

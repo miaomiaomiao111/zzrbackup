@@ -7,12 +7,12 @@ spring:
   cloud:
     nacos:
       discovery:      #配置注册中心
-        server-addr: 192.168.94.129:8848
-        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        server-addr: 101.132.223.144:58848
+        namespace: 6d14d216-1da5-4873-8dac-3be2fdb8eba8
         group: ${group.name}
       config:         #配置中心
-        server-addr: 192.168.94.129:8848
-        namespace: 3899dba1-735a-4a43-8c71-8f71a6832066
+        server-addr: 101.132.223.144:58848
+        namespace: 6d14d216-1da5-4873-8dac-3be2fdb8eba8
         group: ${group.name}
         file-extension: properties
         shared-configs:

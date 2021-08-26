@@ -25,10 +25,10 @@ spring:
       max-request-size: 4MB
       max-file-size: 4MB
   datasource:
-    url: jdbc:mysql://192.168.94.129:3306/farmingdb?characterEncoding=utf8&useUnicode=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://101.132.223.144:53306/farmingdb?characterEncoding=utf8&useUnicode=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
+    password: xc127
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       max-pool-prepared-statement-per-connection-size: 20

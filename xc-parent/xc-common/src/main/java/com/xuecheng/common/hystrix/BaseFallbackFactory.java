@@ -5,6 +5,8 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 
+import java.lang.reflect.*;
+
 public class BaseFallbackFactory<T, N extends T, E extends T> implements FallbackFactory<T> {
 
 	@Autowired
