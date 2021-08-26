@@ -1,9 +1,6 @@
 package com.xuecheng.content.controller;
 
-import com.xuecheng.api.content.model.dto.TeachplanDTO;
 import com.xuecheng.common.domain.response.RestResponse;
-import com.xuecheng.common.util.SecurityUtil;
-import com.xuecheng.content.entity.TeachplanMedia;
 import com.xuecheng.content.service.TeachplanMediaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

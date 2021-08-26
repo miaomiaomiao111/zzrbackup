@@ -19,11 +19,11 @@ import com.xuecheng.common.util.StringUtil;
 import com.xuecheng.media.common.constant.MediaErrorCode;
 import com.xuecheng.media.common.utils.AliyunVODUtil;
 import com.xuecheng.media.convert.MediaConvert;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.*;
 import com.xuecheng.media.service.MediaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>

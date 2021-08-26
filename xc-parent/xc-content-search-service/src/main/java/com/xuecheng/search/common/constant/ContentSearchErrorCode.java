@@ -2,7 +2,6 @@ package com.xuecheng.search.common.constant;
 
 
 import com.xuecheng.common.domain.code.ErrorCode;
-import com.xuecheng.common.exception.ExceptionCast;
 
 /**
  * 课程搜索服务业务异常枚举类

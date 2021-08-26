@@ -8,7 +8,6 @@ import com.xuecheng.common.enums.order.OrderDealStatusEnum;
 import com.xuecheng.common.util.JsonUtil;
 import com.xuecheng.order.entity.Orders;
 import com.xuecheng.order.service.OrdersService;
-import com.xuecheng.order.service.PayService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.RocketMQTransactionListener;
 import org.apache.rocketmq.spring.core.RocketMQLocalTransactionListener;

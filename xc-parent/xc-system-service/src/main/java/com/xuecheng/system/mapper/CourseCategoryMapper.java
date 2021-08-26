@@ -1,7 +1,6 @@
 package com.xuecheng.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xuecheng.api.system.model.dto.CourseCategoryDTO;
 import com.xuecheng.system.entity.CourseCategory;
 import com.xuecheng.system.entity.ex.CourseCategoryNode;
 

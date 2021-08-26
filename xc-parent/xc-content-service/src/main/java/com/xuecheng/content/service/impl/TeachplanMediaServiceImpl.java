@@ -5,8 +5,6 @@ import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xuecheng.common.domain.code.CommonErrorCode;
 import com.xuecheng.common.domain.response.RestResponse;
-import com.xuecheng.common.exception.ExceptionCast;
-import com.xuecheng.content.common.constant.ContentErrorCode;
 import com.xuecheng.content.entity.TeachplanMedia;
 import com.xuecheng.content.mapper.TeachplanMediaMapper;
 import com.xuecheng.content.service.TeachplanMediaService;

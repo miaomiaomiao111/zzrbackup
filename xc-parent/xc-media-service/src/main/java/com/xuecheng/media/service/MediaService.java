@@ -1,14 +1,13 @@
 package com.xuecheng.media.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.xuecheng.api.media.model.dto.MediaAuditDTO;
 import com.xuecheng.api.media.model.dto.MediaDTO;
 import com.xuecheng.api.media.model.qo.QueryMediaModel;
-import com.xuecheng.api.media.model.vo.MediaAuditVO;
 import com.xuecheng.common.domain.page.PageRequestParams;
 import com.xuecheng.common.domain.page.PageVO;
 import com.xuecheng.common.domain.response.RestResponse;
 import com.xuecheng.media.entity.Media;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>

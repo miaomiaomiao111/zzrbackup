@@ -3,8 +3,6 @@ package com.shanjupay.user.convert;
 import com.shanjupay.user.api.dto.tenant.AccountDTO;
 import com.shanjupay.user.entity.Account;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 @Mapper

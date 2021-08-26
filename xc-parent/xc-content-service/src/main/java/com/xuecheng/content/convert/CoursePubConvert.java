@@ -5,7 +5,6 @@ import com.xuecheng.api.content.model.dto.CoursePubDTO;
 import com.xuecheng.content.entity.CourseBase;
 import com.xuecheng.content.entity.CoursePub;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 @Mapper

@@ -1,8 +1,7 @@
 package com.xuecheng.learning.mapper;
 
-import com.xuecheng.learning.entity.CourseRecord;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.springframework.stereotype.Repository;
+import com.xuecheng.learning.entity.CourseRecord;
 
 /**
  * <p>

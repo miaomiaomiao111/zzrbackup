@@ -1,10 +1,10 @@
 package com.xuecheng.content.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.xuecheng.api.content.model.dto.CourseBaseDTO;
 import com.xuecheng.common.domain.page.PageRequestParams;
 import com.xuecheng.common.domain.page.PageVO;
 import com.xuecheng.content.entity.CourseBase;
-import com.xuecheng.api.content.model.dto.CourseBaseDTO;
 import com.xuecheng.content.model.qo.QueryCourseModel;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,6 @@
 package com.xuecheng.order.controller;
 
 import com.github.binarywang.wxpay.bean.notify.WxPayNotifyResponse;
-import com.github.binarywang.wxpay.bean.notify.WxPayOrderNotifyResult;
-import com.github.binarywang.wxpay.bean.result.BaseWxPayResult;
 import com.xuecheng.api.order.OrderApi;
 import com.xuecheng.api.order.model.dto.OrdersDTO;
 import com.xuecheng.api.order.model.pay.PayCodeUrlResult;

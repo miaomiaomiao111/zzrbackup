@@ -7,10 +7,10 @@ import com.xuecheng.api.content.model.vo.CourseTeacherVO;
 import com.xuecheng.common.domain.page.PageRequestParams;
 import com.xuecheng.common.util.SecurityUtil;
 import com.xuecheng.content.convert.CourseTeacherConvert;
-import org.springframework.web.bind.annotation.*;
 import com.xuecheng.content.service.CourseTeacherService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

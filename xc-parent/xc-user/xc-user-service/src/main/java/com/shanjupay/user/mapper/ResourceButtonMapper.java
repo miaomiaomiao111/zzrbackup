@@ -1,13 +1,8 @@
 package com.shanjupay.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.shanjupay.user.api.dto.resource.ResourceDTO;
 import com.shanjupay.user.entity.ResourceButton;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 
 /**

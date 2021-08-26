@@ -6,7 +6,6 @@ import com.shanjupay.user.api.dto.tenant.AccountRoleDTO;
 import com.shanjupay.user.api.dto.tenant.AccountRoleQueryDTO;
 import com.shanjupay.user.api.dto.tenant.TenantDTO;
 import com.shanjupay.user.api.dto.tenant.TenantQueryDTO;
-import com.shanjupay.user.entity.Bundle;
 import com.shanjupay.user.entity.Tenant;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;

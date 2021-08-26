@@ -7,7 +7,6 @@ import com.shanjupay.user.api.ResourceService;
 import com.shanjupay.user.api.dto.authorization.AuthorizationInfoDTO;
 import com.shanjupay.user.api.dto.resource.ApplicationDTO;
 import com.shanjupay.user.api.dto.resource.ApplicationQueryParams;
-import com.shanjupay.user.api.dto.resource.ResourceAPPDTO;
 import com.shanjupay.user.api.dto.resource.ResourceDTO;
 import com.shanjupay.user.convert.ResourceApplicationConvert;
 import com.shanjupay.user.entity.ResourceApplication;
@@ -19,12 +18,9 @@ import com.shanjupay.user.mapper.ResourceMenuMapper;
 import com.xuecheng.common.domain.code.CommonErrorCode;
 import com.xuecheng.common.domain.page.PageVO;
 import com.xuecheng.common.exception.BusinessException;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
-
-import java.util.*;
 
 @Service
 public class ResourceServiceImpl implements ResourceService {

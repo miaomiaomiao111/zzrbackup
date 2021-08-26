@@ -1,12 +1,9 @@
 package com.xuecheng.media.controller;
 
-import com.xuecheng.api.content.model.dto.CourseBaseDTO;
 import com.xuecheng.api.media.MediaAuditApi;
 import com.xuecheng.api.media.model.dto.MediaAuditDTO;
-import com.xuecheng.api.media.model.dto.MediaDTO;
 import com.xuecheng.api.media.model.vo.MediaAuditVO;
 import com.xuecheng.media.convert.MediaAuditConvert;
-import com.xuecheng.media.convert.MediaConvert;
 import com.xuecheng.media.service.MediaService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

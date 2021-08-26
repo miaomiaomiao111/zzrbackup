@@ -1,13 +1,11 @@
 package com.shanjupay.user.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.shanjupay.user.api.dto.menu.MenuDTO;
 import com.shanjupay.user.api.dto.menu.MenuQueryDTO;
 import com.shanjupay.user.api.dto.resource.ResourceAPPDTO;
-import com.shanjupay.user.api.dto.resource.ResourceDTO;
 import com.shanjupay.user.entity.ResourceMenu;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import javafx.scene.control.Pagination;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

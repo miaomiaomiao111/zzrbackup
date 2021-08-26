@@ -1,7 +1,7 @@
 package com.xuecheng.learning.service;
 
-import com.xuecheng.learning.entity.CourseRecord;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.xuecheng.learning.entity.CourseRecord;
 
 /**
  * <p>

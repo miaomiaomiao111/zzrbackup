@@ -10,7 +10,6 @@ import com.xuecheng.search.service.CoursePubSearchService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import sun.rmi.runtime.Log;
 
 import javax.annotation.Resource;
 import java.io.IOException;

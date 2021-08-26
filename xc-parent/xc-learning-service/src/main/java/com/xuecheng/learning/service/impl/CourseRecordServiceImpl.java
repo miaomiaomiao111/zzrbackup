@@ -2,6 +2,7 @@ package com.xuecheng.learning.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xuecheng.agent.order.ContentSearchApiAgent;
 import com.xuecheng.api.content.model.dto.TeachplanDTO;
 import com.xuecheng.api.learning.model.dto.CourseRecordDTO;
@@ -18,10 +19,9 @@ import com.xuecheng.learning.convert.CourseRecordConvert;
 import com.xuecheng.learning.entity.CourseRecord;
 import com.xuecheng.learning.mapper.CourseRecordMapper;
 import com.xuecheng.learning.service.CourseRecordService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import java.time.LocalDateTime;

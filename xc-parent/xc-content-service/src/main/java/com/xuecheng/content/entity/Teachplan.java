@@ -2,6 +2,7 @@ package com.xuecheng.content.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 

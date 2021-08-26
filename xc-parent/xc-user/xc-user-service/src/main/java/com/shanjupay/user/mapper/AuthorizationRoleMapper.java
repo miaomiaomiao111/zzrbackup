@@ -1,10 +1,8 @@
 package com.shanjupay.user.mapper;
 
-import com.shanjupay.user.api.dto.authorization.RoleDTO;
-import com.shanjupay.user.entity.AuthorizationRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.shanjupay.user.entity.AuthorizationRole;
 import org.apache.ibatis.annotations.*;
-import org.apache.ibatis.mapping.StatementType;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

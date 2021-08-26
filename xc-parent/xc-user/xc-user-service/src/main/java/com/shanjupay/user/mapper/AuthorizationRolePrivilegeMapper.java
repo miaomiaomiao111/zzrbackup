@@ -1,9 +1,8 @@
 package com.shanjupay.user.mapper;
 
-import com.shanjupay.user.entity.AuthorizationRolePrivilege;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.shanjupay.user.entity.AuthorizationRolePrivilege;
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
