@@ -5,7 +5,7 @@ import com.xuecheng.api.content.model.dto.TeachplanDTO;
 import com.xuecheng.api.content.model.dto.TeachplanMediaDTO;
 import com.xuecheng.api.content.model.vo.BindTeachplanMediaVO;
 import com.xuecheng.api.content.model.vo.TeachplanVO;
-import com.xuecheng.common.util.SecurityUtil;
+import com.xuecheng.content.common.util.UAASecurityUtil;
 import com.xuecheng.content.convert.TeachplanConvert;
 import com.xuecheng.content.service.TeachplanService;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +29,7 @@ public class TeachplanController implements TeachplanApi {
     @GetMapping("teachplan/{courseId}/tree-nodes")
     public TeachplanDTO queryTreeNodeByCourseId(@PathVariable("courseId") Long courseId) {
 
-        Long companyId = SecurityUtil.getCompanyId();
+        Long companyId = UAASecurityUtil.getCompanyId();
 
        TeachplanDTO dto = teachplanService.queryTreeNodesByCourseId(courseId,companyId);
        return  dto;
@@ -40,7 +40,7 @@ public class TeachplanController implements TeachplanApi {
     public TeachplanDTO createOrModifyTeachPlan(@RequestBody TeachplanVO teachplanVO) {
 
         //1.获得公司Id
-        Long companyId = SecurityUtil.getCompanyId();
+        Long companyId = UAASecurityUtil.getCompanyId();
 
         //2.将vo数据转为 dto 数据
         TeachplanDTO dto = TeachplanConvert.INSTANCE.vo2dto(teachplanVO);
@@ -54,7 +54,7 @@ public class TeachplanController implements TeachplanApi {
     @PostMapping("teachplan/media/association")
     public TeachplanMediaDTO associateMedia(@RequestBody BindTeachplanMediaVO vo) {
 
-        Long companyId = SecurityUtil.getCompanyId();
+        Long companyId = UAASecurityUtil.getCompanyId();
 
         TeachplanMediaDTO teachplanMediaDTO = new TeachplanMediaDTO();
 

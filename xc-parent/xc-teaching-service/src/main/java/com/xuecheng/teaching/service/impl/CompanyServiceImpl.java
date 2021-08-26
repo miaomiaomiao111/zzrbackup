@@ -23,6 +23,7 @@ public class CompanyServiceImpl extends ServiceImpl<CompanyMapper, Company> impl
         LambdaQueryWrapper<Company> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(Company::getTenantId, tenantId);
         Company company = this.getOne(queryWrapper);
-        return CompanyConvert.INSTANCE.entity2dto(company);
+        CompanyDTO companyDTO = CompanyConvert.INSTANCE.entity2dto(company);
+        return companyDTO;
     }
 }

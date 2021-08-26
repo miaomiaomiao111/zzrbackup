@@ -14,10 +14,10 @@ import com.xuecheng.common.domain.page.PageRequestParams;
 import com.xuecheng.common.domain.page.PageVO;
 import com.xuecheng.common.domain.response.RestResponse;
 import com.xuecheng.common.exception.ExceptionCast;
-import com.xuecheng.common.util.SecurityUtil;
 import com.xuecheng.common.util.StringUtil;
 import com.xuecheng.media.common.constant.MediaErrorCode;
 import com.xuecheng.media.common.utils.AliyunVODUtil;
+import com.xuecheng.media.common.utils.UAASecurityUtil;
 import com.xuecheng.media.convert.MediaConvert;
 import com.xuecheng.media.service.MediaService;
 import lombok.extern.slf4j.Slf4j;
@@ -130,7 +130,7 @@ public class MediaController implements MediaApi {
                                   @RequestBody QueryMediaModel model) {
 
         //1.获得访问令牌并从中解析出机构的信息Id数据
-        long companyId = SecurityUtil.getCompanyId();
+        long companyId = UAASecurityUtil.getCompanyId();
 
         model.setCompanyId(companyId);
         //2.调用service层的方法
@@ -142,7 +142,7 @@ public class MediaController implements MediaApi {
     @PostMapping(value = "media",name = "上传媒资")
     public MediaDTO createMedia(@RequestBody MediaVO vo) {
         //1.获取机构ID
-        Long companyId = SecurityUtil.getCompanyId();
+        Long companyId = UAASecurityUtil.getCompanyId();
         MediaDTO mediaDTO = MediaConvert.INSTANCE.vo2dto(vo);
         mediaDTO.setCompanyId(companyId);
         MediaDTO mediaDTO1 = mediaService.createMedia(mediaDTO);
@@ -153,7 +153,7 @@ public class MediaController implements MediaApi {
     @GetMapping("/media/preview/{mediaId}")
     public String previewMedia(@PathVariable Long mediaId) {
 
-        Long companyId = SecurityUtil.getCompanyId();
+        Long companyId = UAASecurityUtil.getCompanyId();
 
         String vodUrl = mediaService.getVODUrl(mediaId, companyId);
 
@@ -163,7 +163,7 @@ public class MediaController implements MediaApi {
     @GetMapping("m/media/preview/{mediaId}")
     public String mPreviewMedia(@PathVariable Long mediaId) {
 
-        Long companyId = SecurityUtil.getCompanyId();
+        Long companyId = UAASecurityUtil.getCompanyId();
 
         String vodUrl = mediaService.mGetVODUrl(mediaId, companyId);
 
@@ -173,7 +173,7 @@ public class MediaController implements MediaApi {
     @DeleteMapping(value = "media/{mediaId}", name = "删除媒资信息")
     public boolean deleteMedia(@PathVariable("mediaId") Long mediaId) {
 
-        Long companyId = SecurityUtil.getCompanyId();
+        Long companyId = UAASecurityUtil.getCompanyId();
         return mediaService.deleteMedia(mediaId, companyId);
     }
 
