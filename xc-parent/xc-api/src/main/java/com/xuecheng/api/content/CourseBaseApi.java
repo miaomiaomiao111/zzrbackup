@@ -8,6 +8,7 @@ import com.xuecheng.common.domain.page.PageVO;
 import com.xuecheng.content.model.qo.QueryCourseModel;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 
 /**

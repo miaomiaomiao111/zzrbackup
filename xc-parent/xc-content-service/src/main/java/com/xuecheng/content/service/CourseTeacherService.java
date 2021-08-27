@@ -1,8 +1,11 @@
 package com.xuecheng.content.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.xuecheng.api.content.model.dto.CourseBaseDTO;
 import com.xuecheng.api.content.model.dto.CourseTeacherDTO;
+import com.xuecheng.common.domain.page.PageRequestParams;
+import com.xuecheng.common.domain.page.PageVO;
 import com.xuecheng.content.entity.CourseTeacher;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
 

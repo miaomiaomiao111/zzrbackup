@@ -19,6 +19,7 @@
         <module>xc-learning-service</module>
         <module>xc-teaching-service</module>
         <module>xc-order-service</module>
+        <module>xc-comment-service</module>
     </modules>
 
     <!-- 继承 Spring Boot 父工程 -->

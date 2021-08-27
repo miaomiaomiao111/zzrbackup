@@ -5,12 +5,12 @@ import com.xuecheng.api.content.CourseTeacherApi;
 import com.xuecheng.api.content.model.dto.CourseTeacherDTO;
 import com.xuecheng.api.content.model.vo.CourseTeacherVO;
 import com.xuecheng.common.domain.page.PageRequestParams;
-import com.xuecheng.content.common.util.UAASecurityUtil;
+import com.xuecheng.common.util.SecurityUtil;
 import com.xuecheng.content.convert.CourseTeacherConvert;
+import org.springframework.web.bind.annotation.*;
 import com.xuecheng.content.service.CourseTeacherService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,7 +32,7 @@ public class CourseTeacherController implements CourseTeacherApi {
     public List<CourseTeacherDTO> queryTeachers(@PathVariable("courseBaseId") Long courseBaseId,
                                                PageRequestParams params) {
 
-        Long companyId = UAASecurityUtil.getCompanyId();
+        Long companyId = SecurityUtil.getCompanyId();
         List<CourseTeacherDTO> dtos = courseTeacherService.queryTeachersByCourseBaseId(courseBaseId, companyId);
         return dtos;
     }
@@ -40,7 +40,7 @@ public class CourseTeacherController implements CourseTeacherApi {
     @PostMapping(value = "courseTeacher", name = "新增/修改教师信息")
     public CourseTeacherDTO modifyTeacher(@RequestBody CourseTeacherVO courseTeacherVO) {
 
-        Long companyId = UAASecurityUtil.getCompanyId();
+        Long companyId = SecurityUtil.getCompanyId();
         CourseTeacherDTO courseTeacherDTO = CourseTeacherConvert.INSTANCE.vo2dto(courseTeacherVO);
         CourseTeacherDTO dto = courseTeacherService.modifyTeacher(courseTeacherDTO, companyId);
         return dto;

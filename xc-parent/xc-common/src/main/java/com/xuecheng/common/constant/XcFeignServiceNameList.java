@@ -45,4 +45,9 @@ public interface XcFeignServiceNameList {
     */
    String XC_SEARCH_SERVICE = "search-service";
 
+
+   /**
+    * 评论系统服务名称标识
+    */
+   String XC_COMMENT_SERVICE = "comment-service";
 }

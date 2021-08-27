@@ -1,6 +1,7 @@
 package com.xuecheng.common.enums;
 
 import java.lang.annotation.*;
+
 /**
  * <p>
  *     数据字典自定义注解StatuContent

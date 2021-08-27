@@ -25,6 +25,7 @@ import com.xuecheng.common.domain.code.ErrorCode;
 public enum TeachingErrorCode implements ErrorCode {
 	E_130101(130101,"保存教师信息失败"),
 	E_130102(130102,"教师手机信息已存在，无法添加"),
+	E_130103(130103,"分页查询评论列表失败"),
 
 	E_130201(130201,"保存教师和课程关联信息失败"),
 	E_130202(130202,"老师和教师已经关联，无需关联"),
@@ -62,6 +63,7 @@ public enum TeachingErrorCode implements ErrorCode {
 	E_132000(132000,"接口调用创建账号异常"),
 	E_132001(132000,"接口调用检查用户名异常"),
 	E_132002(132000,"接口调用检查手机号异常"),
+	E_132003(132003,"课程不存在"),
 	;
 
 	private int code;

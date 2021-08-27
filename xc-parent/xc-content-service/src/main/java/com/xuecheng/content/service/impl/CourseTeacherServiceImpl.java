@@ -2,9 +2,13 @@ package com.xuecheng.content.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.xuecheng.api.content.model.dto.CourseBaseDTO;
 import com.xuecheng.api.content.model.dto.CourseTeacherDTO;
+import com.xuecheng.api.content.model.vo.CourseTeacherVO;
 import com.xuecheng.common.domain.code.CommonErrorCode;
+import com.xuecheng.common.domain.page.PageRequestParams;
+import com.xuecheng.common.domain.page.PageVO;
 import com.xuecheng.common.enums.common.CommonEnum;
 import com.xuecheng.common.exception.ExceptionCast;
 import com.xuecheng.content.common.constant.ContentErrorCode;
@@ -14,9 +18,12 @@ import com.xuecheng.content.entity.CourseTeacher;
 import com.xuecheng.content.mapper.CourseTeacherMapper;
 import com.xuecheng.content.service.CourseBaseService;
 import com.xuecheng.content.service.CourseTeacherService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.http.impl.execchain.TunnelRefusedException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

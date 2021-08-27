@@ -53,6 +53,11 @@
             <version>1.5.20</version>
         </dependency>
 
+        <!--httpClient的依赖 -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+        </dependency>
 
     </dependencies>
 

@@ -8,7 +8,7 @@ spring:
   cloud:
 #    sentinel:
 #         transport:
-#           dashboard: 101.132.223.144:58858 #sentinel控制台地址
+#           dashboard: 192.168.94.129:8858 #sentinel控制台地址
 
     nacos:
       discovery:      #配置注册中心
@@ -23,7 +23,7 @@ spring:
         shared-configs:
           - dataId: mp-config.properites
             group: ${group.name}
-          - dataId: aliyun-config.properties
+          - dataId: aliyun-vod.properties
             group: ${group.name}
           - dataId: ribbon-config.properties
             group: ${group.name}
