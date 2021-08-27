@@ -1,0 +1,51 @@
+#微服务配置
+spring:
+  application:
+    name: comment-service
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  cloud:
+    nacos:
+      discovery:      #配置注册中心
+        server-addr: 101.132.223.144:58848
+        namespace: 6d14d216-1da5-4873-8dac-3be2fdb8eba8
+        group: ${group.name}
+      config:         #配置中心
+        server-addr: 101.132.223.144:58848
+        namespace: 6d14d216-1da5-4873-8dac-3be2fdb8eba8
+        group: ${group.name}
+        file-extension: properties
+        shared-configs:
+          - dataId: mp-config.properites
+            group: ${group.name}
+          - dataId: ribbon-config.properties
+            group: ${group.name}
+          - dataId: rocketmq-config.properties
+            group: ${group.name}
+
+  profiles:           # 激活配置环境
+    active: dev
+
+# 组名称
+group:
+  name: xc-group
+
+# 日志文件配置路径
+logging:
+  config: classpath:log4j2-dev.xml
+
+# swagger 文档配置
+swagger:
+  title: "学成在线评论管理系统"
+  description: "评论系统管理系统对评论相关信息进行业务管理数据"
+  base-package: com.xuecheng.comment
+  enabled: true
+  version: 1.0.0
+#    #开启feign的Sentinel降级
+#feign:
+#  sentinel:
+#    enabled: true
+#
+#  hystrix:
+#    enabled: true
