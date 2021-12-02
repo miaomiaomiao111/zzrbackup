@@ -20,6 +20,7 @@ public class UAASecurityUtil {
 
 	public static LoginUser getUser() {
 		HttpServletRequest request = ((ServletRequestAttributes) (RequestContextHolder.currentRequestAttributes())).getRequest();
+		System.out.println(11);
 		return (LoginUser)request.getAttribute(LoginUser.REQUEST_USER);
 	}
 
